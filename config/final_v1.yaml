@@ -1,0 +1,27 @@
+seed: 42
+debug: False
+ext_data_pretrain: True
+ext_data_model_dir: 'models/exp_pretrain_v1/fold0/checkpoint-1346'
+full_data: True 
+out_dir: 'models'
+project: 'pii_linux'
+run_name: 'final_v1'
+base_model: 'microsoft/deberta-v3-large'
+
+train_params:
+    train_max_len: 1024
+    valid_max_len: 2048
+    infer_max_len: 2560
+    add_newline_token: True
+    freeze_layers: 0
+    grad_accum: 2
+    logging_steps: 200
+    lr: 1.0e-5
+    lr_warmup_pct: 0.1
+    num_epochs: 2
+    num_workers: 0
+    scheduler: 'cosine'
+    train_batch_size: 2
+    valid_batch_size: 1
+    weight_decay: 0.01
+    pred_thresh: 0.9875

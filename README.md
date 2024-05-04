@@ -28,8 +28,8 @@ This will create the `./datasets` folder with the required datasets as well as t
 To train the final models run the following commands:
  ```
  cd code
- python train.py --fold=3 --config_path='../config/final_v1.yaml
- python train.py --fold=4 --config_path='../config/final_v1.yaml
+ python train.py --fold=3 --config_path='../config/final_v1.yaml'
+ python train.py --fold=4 --config_path='../config/final_v1.yaml'
 
  ```
 
